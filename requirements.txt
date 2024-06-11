@@ -1,0 +1,8 @@
+pandas
+numpy
+scipy
+matplot
+seaborn
+scikit_learn
+flask
+mlxtend
