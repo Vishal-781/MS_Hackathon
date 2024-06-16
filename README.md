@@ -26,10 +26,12 @@ These all things are done in single script that is the model.py
 python3 train_model.py
 You can run model.py to train model OR you can use model.ipynb to run it on jupyter notebook.
 
-After this we have to run Flask API '\n'
-Running the Flask API
+After this we have to run Flask API 
 
-use command :
+
+Running the Flask API use command :
+
+
 python3 main.py 
 this will run api at http://127.0.0.1:5000/
 
