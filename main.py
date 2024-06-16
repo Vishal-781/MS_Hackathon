@@ -1,11 +1,16 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import joblib
 import numpy as np
 
 app = Flask(__name__)
+CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 # Load the trained model
 model = joblib.load('knn_model.joblib')
+
+# List of features used by the model
 features = [
     "itching", "skin_rash", "nodal_skin_eruptions", "continuous_sneezing", "shivering", "chills", "joint_pain", "stomach_pain", 
     "acidity", "ulcers_on_tongue", "muscle_wasting", "vomiting", "burning_micturition", "spotting_urination", "fatigue", 
@@ -31,8 +36,8 @@ features = [
 
 def get_symptoms(s):
     s = str(s).lower().replace(",", " ").split()
-    fmap = []
     print(s)
+    fmap = []
     for f in features:
         if f in s:
             fmap.append(1)
@@ -48,6 +53,7 @@ def hello():
 def predict():
     # Get JSON data from request
     data = request.get_json()
+    print(data)
     symptoms = data.get('symptoms')
 
     if not symptoms:
