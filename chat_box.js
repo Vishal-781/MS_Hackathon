@@ -1,8 +1,18 @@
 var getAns = async (input) => {
-  // if (condition) {
-  //   fetch python api for condition and return
-  // }
-  // else {
+  const myArray = input.split(" ");
+  if (myArray[0] == "symptoms") {
+    // fetch python api for condition and return
+    var res = await fetch("http://127.0.0.1:5000/predict",{
+      method: "POST",
+      body: JSON.stringify({
+        "symptoms": input
+      }),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    })
+  }
+  else {
     var res = await fetch("http://localhost:11434/api/generate", {
       method: "POST",
       body: JSON.stringify({
@@ -14,7 +24,7 @@ var getAns = async (input) => {
         "Content-Type": "application/json"
       }
   })
-//  }
+ }
 
   var ans = await res.json()
 
