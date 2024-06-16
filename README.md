@@ -33,6 +33,7 @@ Running the Flask API use command :
 
 
 python3 main.py 
+
 this will run api at http://127.0.0.1:5000/
 
 
