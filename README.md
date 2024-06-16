@@ -13,6 +13,8 @@ Python 3.x
 Required Python packages: numpy, pandas, joblib, flask, scipy, matplotlib, mlxtend, seaborn, scikit-learn
 You can install the required packages using pip:
 
+command
+
 pip install numpy pandas joblib flask scipy matplotlib mlxtend seaborn scikit-learn
 
 1. Training the Model:
