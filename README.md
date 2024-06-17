@@ -44,8 +44,8 @@ We use [ollama](https://www.ollama.com/) to run our model
 
 1. Install ollama for respective OS from [here](https://www.ollama.com/download)
 
-1. Then run the command `ollama run llama3`
+2. Then run the command `ollama run llama3`
 > [!NOTE]
 > The model is large and requires decent PC to run.
 
-1. The model's endpoint is exposed at port `11434`
+3. The model's endpoint is exposed at port `11434`
