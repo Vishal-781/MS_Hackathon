@@ -49,3 +49,6 @@ We use [ollama](https://www.ollama.com/) to run our model
 > The model is large and requires decent PC to run.
 
 3. The model's endpoint is exposed at port `11434`
+
+## Running the Chat bot:
+The Chat bot is just a static html page and can be run however one wishes, some ways are using `python`, `apache`, `nginx` etc, servers to serve the directory.
